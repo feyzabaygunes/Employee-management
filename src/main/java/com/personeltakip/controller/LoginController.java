@@ -55,17 +55,6 @@ public class LoginController {
 
     }
 
-/*
-
-    @GetMapping({"/studentOgrenci_list"})
-
-    public String studentOgrenciGiris() {
-
-        return "studentOgrenci_list";
-
-    }
-*/
-
 
     @RequestMapping(value="/employee_login", method=RequestMethod.POST)
 
@@ -120,72 +109,6 @@ public class LoginController {
         }
         return null;
     }
-
-    // Staj bilgisi tablosundan student_id'si bizim gönderdiğimiz student_id'ye eşit olan student'ın
-    // staj birim id'si alınır. Sonra bu id ile staj birim tablosundaki eşleşen kaydın şirket bilgisinin idsi elde edilir
-    // bu id yoluyla şirket bilgisi bulunur.
-    // Eğer student'idsi bulunamazsa boş kayıt döndürür.
-/*
-    private  Sirketbilgisi getSirket(int student_id){
-
-//        try {
-        for (Stajbilgisi stajbilgisi: stajbilgisiService.getAllStajbilgisi()){
-
-            if (stajbilgisi.getEmployee() != null && stajbilgisi.getEmployee().getId() == student_id){
-
-                int stajbirim_id = stajbilgisi.getStajbirim().getId();
-
-                for (Stajbirim stajbirim: stajbirimService.getAllStajbirim()){
-
-                    if(stajbirim.getId() == stajbirim_id){
-
-                        for(Sirketbilgisi sirketbilgisi: sirketbilgisiService.getAllSirketbilgisi()){
-
-                            if(sirketbilgisi.getId() == stajbirim.getSirketbilgisi().getId()){
-
-                                return sirketbilgisi;
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-//        }catch(Exception e){
-//            System.out.println("Catch - Hata Alındı.");
-//        }
-        return null;
-    }
-
-    private  Stajbirim getStajbirim(int student_id){
-
-        for (Stajbilgisi stajbilgisi: stajbilgisiService.getAllStajbilgisi()){
-
-            if (stajbilgisi.getEmployee().getId() == student_id){
-
-                int stajbirim_id = stajbilgisi.getStajbirim().getId();
-
-                for (Stajbirim stajbirim: stajbirimService.getAllStajbirim()){
-
-                    if(stajbirim.getId() == stajbirim_id){
-                        return stajbirim;
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
-    private  Stajbilgisi getStajbilgisi(int student_id){
-
-        for (Stajbilgisi stajbilgisi: stajbilgisiService.getAllStajbilgisi()){
-
-            if (stajbilgisi.getEmployee().getId() == student_id){
-                return stajbilgisi;
-            }
-        }
-        return null;
-    }*/
 
 
     @RequestMapping(value="/manager_login", method=RequestMethod.POST)
