@@ -56,9 +56,10 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="status">Durumu</label>
                 <form:select path = "status" id = "status" cssClass="form-control">
-                    <form:option value = "Tamamlandı" label = "Tamamlandı" />
+                    <form:option value = "Yeni" label = "Yeni" />
                     <form:option value = "Devam ediyor" label = "Devam" />
                     <form:option value = "Problem" label = "Problem" />
+                    <form:option value = "Tamamlandı" label = "Tamamlandı" />
                 </form:select>
             </div>
 
