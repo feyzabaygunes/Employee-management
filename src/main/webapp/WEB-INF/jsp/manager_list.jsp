@@ -39,6 +39,11 @@
             background-color: #ffffff;
             height: 100%;
         }
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin: 15px;
+        }
     </style>
 </head>
 <body>
